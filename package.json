@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "test:variant3": "node --experimental-vm-modules node_modules/jest/bin/jest.js libs/variant3.test.js --coverage --collectCoverageFrom='libs/variant3.js'",
     "test:variant4": "node --experimental-vm-modules node_modules/jest/bin/jest.js libs/variant4.test.js --coverage --collectCoverageFrom='libs/variant4.js'"
   },
   "devDependencies": {
@@ -26,6 +27,7 @@
       "!libs/**/*.test.js"
     ],
     "testMatch": [
+      "**/libs/variant3.test.js",
       "**/libs/variant4.test.js"
     ],
     "transform": {}
